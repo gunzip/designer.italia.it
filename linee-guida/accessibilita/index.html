@@ -4,7 +4,7 @@
 <!--[if IE 8]>         <html class="lt-ie9" lang="it"> <![endif]-->
 <!--[if gt IE 8]><!--> <html class="no-js" lang="it"> <!--<![endif]-->
   <head>
-    <base href="/designer.italia.it/">
+    <base href="/">
     <!--[if IE]><script type="text/javascript">
         // Fix for IE ignoring relative base tags.
         // See http://stackoverflow.com/questions/3926197/html-base-tag-and-local-folder-path-with-internet-explorer
@@ -19,11 +19,18 @@
     <meta name="description" content="Progettare il design dei siti web della Pubblica Amministrazione (versione alfa)">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="apple-touch-icon" href="apple-touch-icon.png">
+    <!--
+        Titillium web font
+       *********************
+       Esclusivamente per il sito delle linee guida vengono importati tutti gli stili del web font;
+       si consiglia di rivedere il seguente link limitando le famiglie del font utilizzate nel sito.
+     -->
+    <link href='//fonts.googleapis.com/css?family=Titillium+Web:400,200,200italic,300italic,300,400italic,600,600italic,700,700italic,900' rel='stylesheet' type='text/css' />
 
-    <link rel="stylesheet" href="/designer.italia.it/styles/combined-43d3574ed2.css">
+    <link rel="stylesheet" href="/styles/combined-ceee2a4202.css">
 
     <!--[if lt IE 9]>
-    <script src="/designer.italia.it/scripts/combined-94bd8f59ad.i8.js"></script>
+    <script src="/scripts/combined-94bd8f59ad.i8.js"></script>
     <![endif]-->
 
   </head>
@@ -35,27 +42,24 @@
     <![endif]-->
 
     <div class="skiplink sr-only">
-      <div class="container-smaller">
-        <div class="row">
-          <div class="col-md-12 text-center">
-            <ul>
-              <li><a href="#main" tabindex="800">Vai al Contenuto</a></li>
-              <li><a href="#footer" tabindex="800">Raggiungi il Footer</a></li>
-            </ul>
-          </div>
-        </div>
-      </div>
+      <ul>
+        <li><a accesskey="2" href="/linee-guida/accessibilita/#main">Vai al Contenuto</a></li>
+        <li><a accesskey="3" href="/linee-guida/accessibilita/#menu">Vai alla navigazione del sito (sommario delle linee guida)</a></li>
+        <li><a href="https://github.com/italia-it/designer.italia.it">Vai al repository GitHub delle Linee Guida</a></li>
+<!--        <li><a href="#footer">Vai al Footer</a></li>-->
+      </ul>
     </div>
 
     <div class="nav-banner">
       <div class="container">
         <div class="row">
           <div class="col-md-1 col-md-offset-3">
-            <img class="navbar_banner__logo" src="images/loghi/governo.svg" 
-                 alt="Logo Governo Italiano">    
+            <a href="http://governo.it" class="sr-hidden" tabindex="-1">
+              <img class="navbar_banner__logo" src="images/loghi/governo.svg" alt="">
+            </a>
           </div>
           <div class="col-md-6">
-            <p class="h4">Governo Italiano</p>
+            <p class="h4"><a href="http://governo.it">Governo Italiano</a></p>
           </div>
         </div>
       </div>
@@ -63,12 +67,37 @@
 
     <div class="container" id="page_top">
 
+<header class="navbar navbar-default navbar-fixed-top hidden-print" id="navbar">
 
-<nav class="navbar navbar-default navbar-fixed-top hidden-print" id="navbar">
+  <div class="navbar-header container">
+
+    <div class="row">
+      <a id="nav-toggle" href="#" class="navbar-toggle" aria-label="apri e chiudi menu" title="navigazione"
+         data-toggle="offcanvas" data-target="#navbar" aria-controls="navbar">
+        <span></span>
+      </a>
+
+      <div class="col-sm-1 col-md-2 col-md-offset-2 col-xs-2 col-xs-offset-0 navbar__logo_container">
+        <a class="sr-hidden" href="/" tabindex="-1">
+          <img class="navbar__logo" src="images/loghi/logo-it.svg" alt="">
+        </a>
+      </div>
+      <div class="col-xs-8 col-xs-offset-0 col-sm-5 col-sm-offset-0 col-md-5 col-md-offset-0 navbar__title_container">
+        <h1>
+          <a accesskey="1" href="/">
+            <span>Linee guida di design per i siti web della PA
+            </span>
+            <small>Versione alfa</small>
+          </a>
+        </h1>
+      </div>
+    </div><!-- row -->
 
   <!-- START * https://github.com/tholman/github-corners * -->
-  <a href="https://github.com/italia-it/designer.italia.it" class="github-corner" 
+  <a href="https://github.com/italia-it/designer.italia.it" class="github-corner" tabindex="-1"
      title="Vai al repository github delle linee guida">
+    <!-- è già presente negli skiplink -->
+    <!-- <span class="sr-only">Vai al repository GitHub delle Linee Guida</span> -->
     <svg width="140" height="140" viewBox="0 0 250 250" 
          style="fill:#70B7FD; color:#fff; position: absolute; top: 0; border: 0; right: 0;">
     <path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path>
@@ -78,94 +107,124 @@
   </a>
   <!-- END * https://github.com/tholman/github-corners * -->
 
-  <div class="navbar-header container">
-
-    <div class="row">
-      <a id="nav-toggle" href="#" class="navbar-toggle"
-         data-toggle="offcanvas" data-target="#navbar" aria-controls="navbar">
-        <span></span>
-      </a>
-
-      <div class="col-sm-1 col-md-2 col-md-offset-2 col-xs-2 col-xs-offset-0 navbar__logo_container">
-        <img class="navbar__logo" src="images/loghi/logo-it.svg" 
-             alt="Logo italia.it">
-      </div>
-      <div class="col-xs-8 col-xs-offset-0 col-sm-5 col-sm-offset-0 col-md-5 col-md-offset-0 navbar__title_container">
-        <h1>
-          <a href="/designer.italia.it/">
-            <span>Linee guida di design per i siti web della PA
-            </span>
-            <small>Versione alfa</small>
-          </a>
-        </h1>
-      </div>
-    </div><!-- row -->
-
   </div><!-- navbar header container -->
-</nav>
+</header>
 
 
-<main id="main" class="row row-offcanvas row-offcanvas-left">
+<div class="row row-offcanvas row-offcanvas-left">
 
   <!--  <a class="lg-github-link btn btn-default" 
      href="https://github.com/italia-it/designer.italia.it">vai su github</a>-->
   
   <div class="col-md-4 sidebar-offcanvas" id="sidebar">
-    <nav class="hidden-print" 
+    <nav class="hidden-print" id="menu" tabindex="0"
      data-spy="_affix" data-offset-top="0" data-offset-bottom="250">
-  <ul class="nav navgoco">
-    <li>  <a class="btn btn-link" href="/designer.italia.it/assets/agid-bootstrap.zip">
-        <i class="glyphicon glyphicon-download-alt"></i> scarica i componenti</a> </li>
-    <li><a href="/designer.italia.it/">Home</a></li>
-    <li><a href="/designer.italia.it/linee-guida/principi-generali">Principi generali</a></li>
-    <li><a href="/designer.italia.it/linee-guida/usabilita">Usabilità</a>
+
+  <h2 class="sr-only">Sommario delle linee Guida (navigazione del sito):</h2>
+
+  <ul class="nav navmenu">
+    <li>
+      <a class="btn btn-link" href="https://github.com/italia-it/ita-bootstrap/archive/master.zip">
+        <i class="glyphicon glyphicon-download-alt"></i> scarica i componenti</a>
+    </li>
+    <li><a href="/">Home</a></li>
+    <li>
+      <a href="/linee-guida/il-progetto">Il progetto</a>
       <ul>
-        <li><a href="/designer.italia.it/linee-guida/usabilita/principi">Principi</a>
-        <li><a href="/designer.italia.it/linee-guida/usabilita/contenuti">Contenuti</a>
-        <li><a href="/designer.italia.it/linee-guida/usabilita/gruppo-di-lavoro">Misurazione</a>
+        <li><a href="/linee-guida/il-progetto/strategie">Strategie</a></li>
+        <li><a href="/linee-guida/il-progetto/indicazioni-generali">Indicazioni generali</a></li>
+      </ul>
+    </li>
+    <!-- TODO <li><a href="/linee-guida/riferimenti-normativi">Riferimenti normativi</a></li> -->
+    <li><a href="/linee-guida/usabilita">Usabilità</a>
+      <ul>
+        <li>
+          <a href="/linee-guida/usabilita/principi">Principi</a>
+        </li>
+        <li>
+          <a href="/linee-guida/usabilita/misurazione">Misurazione</a>
+        </li>
       </ul>
     </li>
     <li>
-      <a href="/designer.italia.it/linee-guida/accessibilita">Accessibilità</a>
+      <a href="/linee-guida/accessibilita">Accessibilità</a>
       <ul>
-        <!--  <li><a href="/designer.italia.it/linee-guida/accessibilita/multimedia">Multimedia</a> -->
-        <li><a href="/designer.italia.it/linee-guida/accessibilita/mobile-first">Mobile first</a>
-        <li><a href="/designer.italia.it/linee-guida/accessibilita/obiettivi">Obiettivi</a>
+        <!--  <li><a href="/linee-guida/accessibilita/multimedia">Multimedia</a> -->
+        <li>
+          <a href="/linee-guida/accessibilita/obiettivi">Obiettivi</a>
+        </li>
       </ul>
     </li>
-    <li><a href="/designer.italia.it/linee-guida/griglie">Griglie</a></li>
-    <li><a href="/designer.italia.it/linee-guida/tipografia">Tipografia</a></li>
-    <li><a href="/designer.italia.it/linee-guida/colori">Colori</a></li>
-    <li><a href="/designer.italia.it/linee-guida/bottoni">Bottoni</a>
-    <li><a href="/designer.italia.it/linee-guida/form">Form</a>
-    <li><a href="/designer.italia.it/linee-guida/iconografia">Iconografia</a></li>
-    <li><a href="/designer.italia.it/linee-guida/glossario">Glossario</a></li>
+    <li><a href="/linee-guida/contenuti">Gestione contenuti</a></li>
+    <li><a href="/linee-guida/infoarchitettura">Architettura dell'informazione</a></li>
+
+    <li><a href="#visual-design">Visual design</a>
+      <ul id="visual-design">
+        <li><a href="/linee-guida/header">Header</a></li>
+        <li><a href="/linee-guida/footer">Footer</a></li>
+        <li><a href="/linee-guida/layout">Layout</a>
+        <li><a href="/linee-guida/layout/griglie">Griglie</a></li>
+        <li><a href="/linee-guida/layout/mobile-first">Mobile first</a></li>
+        <li><a href="/linee-guida/layout/homepage">Impostazione della home page</a></li>
+        <li><a href="/linee-guida/layout/carousel">Utilizzo di carousel</a></li>
+        <li><a href="/linee-guida/tipografia">Tipografia</a></li>
+        <li><a href="/linee-guida/colori">Colori</a>
+          <ul>
+            <li><a href="/linee-guida/colori/palette-pac">Palette amministrazioni centrali</a></li>
+          </ul>
+        </li>
+        <li><a href="/linee-guida/bottoni">Bottoni</a></li>
+        <li><a href="/linee-guida/form">Form</a></li>
+        <li><a href="/linee-guida/iconografia">Iconografia</a></li>
+      </ul>
+    </li>
+
+    <li>
+      <a href="/linee-guida/componenti">Componenti</a>
+      <ul>
+        <li>
+          <a href="/linee-guida/componenti/spid">SPID</a>
+          <ul>
+            <li><a href="/linee-guida/componenti/spid/loghi">Loghi</a></li>
+            <li><a href="/linee-guida/componenti/spid/icone">Icone</a></li>
+            <li><a href="/linee-guida/componenti/spid/toolkit-service-provider">Service provider</a></li>
+            <li><a href="/linee-guida/componenti/spid/toolkit-identity-provider">Identity provider</a></li>
+            <li><a href="/linee-guida/componenti/spid/toolkit-altri-elementi">Altri elementi</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+    <li><a href="/linee-guida/dispositivi">Dispositivi</a>
+    <li><a href="/linee-guida/glossario">Glossario</a></li>
   </ul>
-  
+
 </nav>
 
   </div><!--/.sidebar-offcanvas-->
 
-  <article class="col-sm-12 col-md-8" id="contenuto-principale">
+  <article class="col-sm-12 col-md-8" id="main" tabindex="0">
     <h2>Accessibilità</h2>
-    <p>Le pubbliche amministrazioni devono rispettare 12 requisiti tecnici riportati nell’Allegato A di accessibilità dei siti web previsti dal Decreto Ministeriale 8 luglio 2005. </p>
-<h4 id="standard-livello-aa">Standard livello AA</h4>
-<div class="lg-callout lg-callout-must">
-<mark>SI DEVE</mark> Il sito web deve raggiungere il livello di conformità AA così come definito nelle <a href="http://www.w3.org/Translations/WCAG20-it/">Web Content Accessibility Guidelines - WCAG 2.0</a>. 
-Le 12 linee guida e i criteri di conformità delle WCAG 2.0 discendono dai quattro principi che fanno da pilastri all’accessibilità del Web.
+    <div class="lg-callout lg-callout-must">
+<mark>SI DEVE</mark>
+Le pubbliche amministrazioni devono rispettare i requisiti tecnici di accessibilità riportati nell&#39;<a href="http://www.agid.gov.it/dm-8-luglio-2005-allegato-A">Allegato A del Decreto Ministeriale 8 luglio 2005</a>) e successive modifiche.
 </div>
 
-<p>Principio 1: <strong>percepibile</strong></p>
-<p>Le informazioni e i componenti dell&#39;interfaccia utente devono essere presentati in modo che possano essere fruiti attraverso differenti canali sensoriali.</p>
-<p>Principio 2: <strong>utilizzabile</strong></p>
-<p>I componenti dell’interfaccia utente e i comandi in essa contenuti devono essere utilizzabili senza ingiustificati disagi o vincoli per l’utente.</p>
-<p>Principio 3: <strong>comprensibile</strong></p>
-<p>Gli utenti devono poter comprendere le modalità di funzionamento dell’interfaccia e le azioni in essa contenute necessarie per ottenere servizi e informazioni.</p>
-<p>Principio 4: <strong>robusto</strong></p>
-<p>Il contenuto deve essere abbastanza robusto da poter essere interpretato in modo affidabile da una vasta gamma di programmi utilizzati dall’utente, comprese le tecnologie assistive.</p>
+<p>I requisiti sono stati definiti sulla base dei Principi, delle linee guida e dei Criteri di successo contenuti nella <em>Recommendation</em> che il World Wide Web Consortium (W3C) - Web Accessibility Initiative (WAI) ha pubblicato l’11 dicembre 2008 e che contiene le Web Content Accessibility Guidelines 2.0 (WCAG 2.0)</p>
+<p>Quattro principi ispiratori, che fanno da pilastri all’accessibilità del Web, sono comuni alle WCAG 2.0 e all’allegato A:</p>
+<ol>
+<li><p><strong>percepibile</strong>: le informazioni e i componenti dell&#39;interfaccia utente devono essere presentati in modo che possano essere fruiti attraverso differenti canali sensoriali.</p>
+</li>
+<li><p><strong>utilizzabile</strong>: i componenti dell’interfaccia utente e i comandi in essa contenuti devono essere utilizzabili senza ingiustificati disagi o vincoli per l’utente.</p>
+</li>
+<li><p><strong>comprensibile</strong>: gli utenti devono poter comprendere le modalità di funzionamento dell’interfaccia e le azioni in essa contenute necessarie per ottenere servizi e informazioni.</p>
+</li>
+<li><p><strong>robusto</strong>: il contenuto deve essere abbastanza robusto da poter essere interpretato in modo affidabile da una vasta gamma di programmi utilizzati dall’utente, comprese le tecnologie assistive.</p>
+</li>
+</ol>
 <h4 id="requisiti-tecnici-di-accessibilit-">Requisiti tecnici di accessibilità</h4>
-<p>I requisiti sono stati definiti sulla base dei Principi, delle Linee guida e dei Criteri di successo contenuti nella Recommendation che il World Wide Web Consortium (W3C) – Web Accessibility Initiative (WAI) ha pubblicato l’11 dicembre 2008 e che contiene le Web Content Accessibility Guidelines 2.0 (WCAG 2.0)
-I requisiti tecnici qui elencati sono collegati ai relativi punti di controllo per le verifiche di conformità (sito AgID). </p>
+<p>I punti di controllo per la verifica di conformità fanno riferimento ai Criteri di successo delle
+WCAG 2.0. Il rispetto dei seguenti requisiti corrisponde al livello di conformità AA delle WCAG 2.0.</p>
+<p>I requisiti tecnici qui elencati sono collegati ai relativi punti di controllo per le verifiche di conformità (sito AgID).</p>
 <p><a href="http://www.agid.gov.it/dm-8-luglio-2005-allegato-A#requisito1">Requisito 1</a> - <strong>Alternative testuali</strong>: fornire alternative testuali per qualsiasi contenuto di natura non testuale. Il testo alternativo deve essere fruito e trasformato secondo le necessità degli utenti; ad esempio convertito in stampa a caratteri ingranditi o in stampa Braille, letto mediante sintesi vocale, simboli o altra modalità.</p>
 <p><a href="http://www.agid.gov.it/dm-8-luglio-2005-allegato-A#requisito2">Requisito 2</a> – <strong>Contenuti audio, contenuti video, animazioni</strong>: fornire alternative testuali equivalenti per le informazioni veicolate da formati audio, formati video, formati contenenti immagini animate (animazioni), formati multisensoriali in genere.</p>
 <p><a href="http://www.agid.gov.it/dm-8-luglio-2005-allegato-A#requisito3">Requisito 3</a> - <strong>Adattabile</strong>: creare contenuti che possano essere presentati in modalità differenti (ad esempio, con layout più semplici), senza perdita di informazioni o struttura.</p>
@@ -180,58 +239,69 @@ I requisiti tecnici qui elencati sono collegati ai relativi punti di controllo p
 <p><a href="http://www.agid.gov.it/dm-8-luglio-2005-allegato-A#requisito12">Requisito 12</a> - <strong>Compatibile</strong>: garantire la massima compatibilità con i programmi utente e con le tecnologie assistive.</p>
 <p>Se in un sito internet di una pubblica amministrazione sono presenti collegamenti ipertestuali che puntano a siti esterni per l&#39;erogazione di servizi essenziali (esempio: albo pretorio, amministrazione trasparente, servizi di pagamento, ecc.) anche questi servizi devono rispettare i requisiti tecnici di accessibilità.</p>
 <h4 id="documenti-allegati-alle-pagine-del-sito">Documenti allegati alle pagine del sito</h4>
-<p>Il formato digitale dei documenti pubblicati <a href="http://www.agid.gov.it/dm-8-luglio-2005-allegato-A#formato">documenti allegati alla pagina web</a> necessari a fornire informazioni o a erogare servizi deve essere utilizzabile con tecnologie compatibili con l’accessibilità e che il contenuto dei documenti deve essere conforme ai requisiti tecnici di accessibilità (per esempio, non pubblicare documenti in formato immagine).</p>
+<p>Qualora all&#39;interno del sito vengano utilizzati documenti digitali (es. file PDF, documenti Word, ...) per fornire informazioni o erogare servizi,
+anche questi dovranno essere prodotti in modo da essere pienamente fruibili tramite tecnologie assistive (lettori di schermo, lettori braille, ...)
+e il contenuto dei documenti dovrà essere conforme ai requisiti tecnici di accessibilità (per esempio: <strong>non pubblicare documenti in formato immagine</strong>).</p>
+<p>Per ulteriori informazioni, si consiglia di far riferimento a quanto indicato nella
+<a href="http://www.agid.gov.it/dm-8-luglio-2005-allegato-A#formato">&quot;Verifica del formato e contenuti dei documenti&quot;</a>
+dell&#39;<a href="http://www.agid.gov.it/dm-8-luglio-2005-allegato-A">allegato A del DM 8 luglio 2005</a>.</p>
 <h3 id="normativa">Normativa</h3>
 <p>La <a href="http://www.agid.gov.it/agenda-digitale/pubblica-amministrazione/accessibilita/normativa">normativa completa e aggiornata sull’accessibilità</a> è disponibile sul sito AgID.</p>
 
   </article>
 
-</main>
+</div>
 
+
+  <a href="#page_top" title="torna all'inizio del contenuto" class="sr-only">torna all'inizio del contenuto</a>
 
 </div><!-- container -->
 
-<div class="lg-partecipa clearfix hidden-print">
-  <p>
+<aside class="lg-partecipa clearfix hidden-print">
+  <h3>
     <i class="glyphicon glyphicon-edit"> </i>
     Vuoi contribuire ? Partecipa creando una issue
     sul <a href="https://github.com/italia-it/designer.italia.it">repository GitHub</a><br>
-  </p>
-</div>
-<footer id="footer" class="hidden-print">
+  </h3>
+</aside>
+
+<footer id="footer" class="hidden-print" tabindex="0">
   <div class="container">
     <div class="row">
       <div class="col-xs-2 col-sm-2 col-md-1">
         <img class="footer__logo" src="images/loghi/logo-it.svg"
-             alt="Logo italia.it">
-      </div>        
-      <div class="col-xs-10 col-sm-10 col-md-5">        
+             alt="">
+      </div>
+      <div class="col-xs-10 col-sm-10 col-md-5">
         <p class="footer__title h3">Linee guida di design per i siti web della PA
           <small>Versione alfa</small></p>
       </div>
       <div class="col-md-6 col-sm-12">
         <a href="http://www.agid.gov.it" target="_blank">
           <img class="footer__logo--agid" src="images/loghi/agid.svg"
-               alt="Logo Agenzia per l'Italia digitale">
+               alt="Agenzia per l'Italia digitale">
         </a>
       </div>
     </div>
     <div class="row">
       <ul class="col-xs-12 footer__links clearfix">
-        <li><a href="/designer.italia.it/linee-guida/privacy-policy/" title="privacy policy">Privacy</a></li>
-        <li><a href="/designer.italia.it/linee-guida/note-legali/" title="note legali">Note legali</a></li>
+        <li><a href="/linee-guida/privacy-policy/" title="privacy policy">Privacy</a></li>
+        <li><a href="/linee-guida/note-legali/" title="note legali">Note legali</a></li>
+        <li><a href="/linee-guida/credits/" title="credits">Credits</a></li>
+        <li><a href="/linee-guida/showcase/" title="credits">Showcase</a></li>
+        <li><a href="/linee-guida/contatti/" title="credits">Contatti</a></li>
       </ul>
     </div>
   </div>
 </footer>
 
-<a href="#page_top" title="torna all'inizio del contenuto" class="scrollto_top sr-only"><span></span></a>
+<a href="#page_top" title="torna all'inizio del contenuto" class="scrollto_top"><span><span class="sr-only">torna all'inizio del contenuto</span></span></a>
 
 <p class="cookie-message sr-only" role="alert">
   Questo sito utilizza cookie tecnici, analytics e di terze parti. Proseguendo nella navigazione accetti l’utilizzo dei cookie.
 </p>
 
-<script src="/designer.italia.it/scripts/combined-331374d3bf.js"></script>
+<script src="/scripts/combined-7c8e5787d0.js"></script>
 
 <script>
 (function (b, o, i, l, e, r) {

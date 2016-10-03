@@ -4,7 +4,7 @@
 <!--[if IE 8]>         <html class="lt-ie9" lang="it"> <![endif]-->
 <!--[if gt IE 8]><!--> <html class="no-js" lang="it"> <!--<![endif]-->
   <head>
-    <base href="/designer.italia.it/">
+    <base href="/">
     <!--[if IE]><script type="text/javascript">
         // Fix for IE ignoring relative base tags.
         // See http://stackoverflow.com/questions/3926197/html-base-tag-and-local-folder-path-with-internet-explorer
@@ -19,11 +19,18 @@
     <meta name="description" content="Progettare il design dei siti web della Pubblica Amministrazione (versione alfa)">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="apple-touch-icon" href="apple-touch-icon.png">
+    <!--
+        Titillium web font
+       *********************
+       Esclusivamente per il sito delle linee guida vengono importati tutti gli stili del web font;
+       si consiglia di rivedere il seguente link limitando le famiglie del font utilizzate nel sito.
+     -->
+    <link href='//fonts.googleapis.com/css?family=Titillium+Web:400,200,200italic,300italic,300,400italic,600,600italic,700,700italic,900' rel='stylesheet' type='text/css' />
 
-    <link rel="stylesheet" href="/designer.italia.it/styles/combined-43d3574ed2.css">
+    <link rel="stylesheet" href="/styles/combined-ceee2a4202.css">
 
     <!--[if lt IE 9]>
-    <script src="/designer.italia.it/scripts/combined-94bd8f59ad.i8.js"></script>
+    <script src="/scripts/combined-94bd8f59ad.i8.js"></script>
     <![endif]-->
 
   </head>
@@ -35,27 +42,24 @@
     <![endif]-->
 
     <div class="skiplink sr-only">
-      <div class="container-smaller">
-        <div class="row">
-          <div class="col-md-12 text-center">
-            <ul>
-              <li><a href="#main" tabindex="800">Vai al Contenuto</a></li>
-              <li><a href="#footer" tabindex="800">Raggiungi il Footer</a></li>
-            </ul>
-          </div>
-        </div>
-      </div>
+      <ul>
+        <li><a accesskey="2" href="/linee-guida/tipografia/#main">Vai al Contenuto</a></li>
+        <li><a accesskey="3" href="/linee-guida/tipografia/#menu">Vai alla navigazione del sito (sommario delle linee guida)</a></li>
+        <li><a href="https://github.com/italia-it/designer.italia.it">Vai al repository GitHub delle Linee Guida</a></li>
+<!--        <li><a href="#footer">Vai al Footer</a></li>-->
+      </ul>
     </div>
 
     <div class="nav-banner">
       <div class="container">
         <div class="row">
           <div class="col-md-1 col-md-offset-3">
-            <img class="navbar_banner__logo" src="images/loghi/governo.svg" 
-                 alt="Logo Governo Italiano">    
+            <a href="http://governo.it" class="sr-hidden" tabindex="-1">
+              <img class="navbar_banner__logo" src="images/loghi/governo.svg" alt="">
+            </a>
           </div>
           <div class="col-md-6">
-            <p class="h4">Governo Italiano</p>
+            <p class="h4"><a href="http://governo.it">Governo Italiano</a></p>
           </div>
         </div>
       </div>
@@ -63,12 +67,37 @@
 
     <div class="container" id="page_top">
 
+<header class="navbar navbar-default navbar-fixed-top hidden-print" id="navbar">
 
-<nav class="navbar navbar-default navbar-fixed-top hidden-print" id="navbar">
+  <div class="navbar-header container">
+
+    <div class="row">
+      <a id="nav-toggle" href="#" class="navbar-toggle" aria-label="apri e chiudi menu" title="navigazione"
+         data-toggle="offcanvas" data-target="#navbar" aria-controls="navbar">
+        <span></span>
+      </a>
+
+      <div class="col-sm-1 col-md-2 col-md-offset-2 col-xs-2 col-xs-offset-0 navbar__logo_container">
+        <a class="sr-hidden" href="/" tabindex="-1">
+          <img class="navbar__logo" src="images/loghi/logo-it.svg" alt="">
+        </a>
+      </div>
+      <div class="col-xs-8 col-xs-offset-0 col-sm-5 col-sm-offset-0 col-md-5 col-md-offset-0 navbar__title_container">
+        <h1>
+          <a accesskey="1" href="/">
+            <span>Linee guida di design per i siti web della PA
+            </span>
+            <small>Versione alfa</small>
+          </a>
+        </h1>
+      </div>
+    </div><!-- row -->
 
   <!-- START * https://github.com/tholman/github-corners * -->
-  <a href="https://github.com/italia-it/designer.italia.it" class="github-corner" 
+  <a href="https://github.com/italia-it/designer.italia.it" class="github-corner" tabindex="-1"
      title="Vai al repository github delle linee guida">
+    <!-- è già presente negli skiplink -->
+    <!-- <span class="sr-only">Vai al repository GitHub delle Linee Guida</span> -->
     <svg width="140" height="140" viewBox="0 0 250 250" 
          style="fill:#70B7FD; color:#fff; position: absolute; top: 0; border: 0; right: 0;">
     <path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path>
@@ -78,80 +107,107 @@
   </a>
   <!-- END * https://github.com/tholman/github-corners * -->
 
-  <div class="navbar-header container">
-
-    <div class="row">
-      <a id="nav-toggle" href="#" class="navbar-toggle"
-         data-toggle="offcanvas" data-target="#navbar" aria-controls="navbar">
-        <span></span>
-      </a>
-
-      <div class="col-sm-1 col-md-2 col-md-offset-2 col-xs-2 col-xs-offset-0 navbar__logo_container">
-        <img class="navbar__logo" src="images/loghi/logo-it.svg" 
-             alt="Logo italia.it">
-      </div>
-      <div class="col-xs-8 col-xs-offset-0 col-sm-5 col-sm-offset-0 col-md-5 col-md-offset-0 navbar__title_container">
-        <h1>
-          <a href="/designer.italia.it/">
-            <span>Linee guida di design per i siti web della PA
-            </span>
-            <small>Versione alfa</small>
-          </a>
-        </h1>
-      </div>
-    </div><!-- row -->
-
   </div><!-- navbar header container -->
-</nav>
+</header>
 
 
-<main id="main" class="row row-offcanvas row-offcanvas-left">
+<div class="row row-offcanvas row-offcanvas-left">
 
   <!--  <a class="lg-github-link btn btn-default" 
      href="https://github.com/italia-it/designer.italia.it">vai su github</a>-->
   
   <div class="col-md-4 sidebar-offcanvas" id="sidebar">
-    <nav class="hidden-print" 
+    <nav class="hidden-print" id="menu" tabindex="0"
      data-spy="_affix" data-offset-top="0" data-offset-bottom="250">
-  <ul class="nav navgoco">
-    <li>  <a class="btn btn-link" href="/designer.italia.it/assets/agid-bootstrap.zip">
-        <i class="glyphicon glyphicon-download-alt"></i> scarica i componenti</a> </li>
-    <li><a href="/designer.italia.it/">Home</a></li>
-    <li><a href="/designer.italia.it/linee-guida/principi-generali">Principi generali</a></li>
-    <li><a href="/designer.italia.it/linee-guida/usabilita">Usabilità</a>
+
+  <h2 class="sr-only">Sommario delle linee Guida (navigazione del sito):</h2>
+
+  <ul class="nav navmenu">
+    <li>
+      <a class="btn btn-link" href="https://github.com/italia-it/ita-bootstrap/archive/master.zip">
+        <i class="glyphicon glyphicon-download-alt"></i> scarica i componenti</a>
+    </li>
+    <li><a href="/">Home</a></li>
+    <li>
+      <a href="/linee-guida/il-progetto">Il progetto</a>
       <ul>
-        <li><a href="/designer.italia.it/linee-guida/usabilita/principi">Principi</a>
-        <li><a href="/designer.italia.it/linee-guida/usabilita/contenuti">Contenuti</a>
-        <li><a href="/designer.italia.it/linee-guida/usabilita/gruppo-di-lavoro">Misurazione</a>
+        <li><a href="/linee-guida/il-progetto/strategie">Strategie</a></li>
+        <li><a href="/linee-guida/il-progetto/indicazioni-generali">Indicazioni generali</a></li>
+      </ul>
+    </li>
+    <!-- TODO <li><a href="/linee-guida/riferimenti-normativi">Riferimenti normativi</a></li> -->
+    <li><a href="/linee-guida/usabilita">Usabilità</a>
+      <ul>
+        <li>
+          <a href="/linee-guida/usabilita/principi">Principi</a>
+        </li>
+        <li>
+          <a href="/linee-guida/usabilita/misurazione">Misurazione</a>
+        </li>
       </ul>
     </li>
     <li>
-      <a href="/designer.italia.it/linee-guida/accessibilita">Accessibilità</a>
+      <a href="/linee-guida/accessibilita">Accessibilità</a>
       <ul>
-        <!--  <li><a href="/designer.italia.it/linee-guida/accessibilita/multimedia">Multimedia</a> -->
-        <li><a href="/designer.italia.it/linee-guida/accessibilita/mobile-first">Mobile first</a>
-        <li><a href="/designer.italia.it/linee-guida/accessibilita/obiettivi">Obiettivi</a>
+        <!--  <li><a href="/linee-guida/accessibilita/multimedia">Multimedia</a> -->
+        <li>
+          <a href="/linee-guida/accessibilita/obiettivi">Obiettivi</a>
+        </li>
       </ul>
     </li>
-    <li><a href="/designer.italia.it/linee-guida/griglie">Griglie</a></li>
-    <li><a href="/designer.italia.it/linee-guida/tipografia">Tipografia</a></li>
-    <li><a href="/designer.italia.it/linee-guida/colori">Colori</a></li>
-    <li><a href="/designer.italia.it/linee-guida/bottoni">Bottoni</a>
-    <li><a href="/designer.italia.it/linee-guida/form">Form</a>
-    <li><a href="/designer.italia.it/linee-guida/iconografia">Iconografia</a></li>
-    <li><a href="/designer.italia.it/linee-guida/glossario">Glossario</a></li>
+    <li><a href="/linee-guida/contenuti">Gestione contenuti</a></li>
+    <li><a href="/linee-guida/infoarchitettura">Architettura dell'informazione</a></li>
+
+    <li><a href="#visual-design">Visual design</a>
+      <ul id="visual-design">
+        <li><a href="/linee-guida/header">Header</a></li>
+        <li><a href="/linee-guida/footer">Footer</a></li>
+        <li><a href="/linee-guida/layout">Layout</a>
+        <li><a href="/linee-guida/layout/griglie">Griglie</a></li>
+        <li><a href="/linee-guida/layout/mobile-first">Mobile first</a></li>
+        <li><a href="/linee-guida/layout/homepage">Impostazione della home page</a></li>
+        <li><a href="/linee-guida/layout/carousel">Utilizzo di carousel</a></li>
+        <li><a href="/linee-guida/tipografia">Tipografia</a></li>
+        <li><a href="/linee-guida/colori">Colori</a>
+          <ul>
+            <li><a href="/linee-guida/colori/palette-pac">Palette amministrazioni centrali</a></li>
+          </ul>
+        </li>
+        <li><a href="/linee-guida/bottoni">Bottoni</a></li>
+        <li><a href="/linee-guida/form">Form</a></li>
+        <li><a href="/linee-guida/iconografia">Iconografia</a></li>
+      </ul>
+    </li>
+
+    <li>
+      <a href="/linee-guida/componenti">Componenti</a>
+      <ul>
+        <li>
+          <a href="/linee-guida/componenti/spid">SPID</a>
+          <ul>
+            <li><a href="/linee-guida/componenti/spid/loghi">Loghi</a></li>
+            <li><a href="/linee-guida/componenti/spid/icone">Icone</a></li>
+            <li><a href="/linee-guida/componenti/spid/toolkit-service-provider">Service provider</a></li>
+            <li><a href="/linee-guida/componenti/spid/toolkit-identity-provider">Identity provider</a></li>
+            <li><a href="/linee-guida/componenti/spid/toolkit-altri-elementi">Altri elementi</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+    <li><a href="/linee-guida/dispositivi">Dispositivi</a>
+    <li><a href="/linee-guida/glossario">Glossario</a></li>
   </ul>
-  
+
 </nav>
 
   </div><!--/.sidebar-offcanvas-->
 
-  <article class="col-sm-12 col-md-8" id="contenuto-principale">
+  <article class="col-sm-12 col-md-8" id="main" tabindex="0">
     <h2>Tipografia</h2>
     <h3 id="web-font">Web font</h3>
 <p>Le Web font sono famiglie di caratteri tipografici la cui licenza d’uso permette il download remoto per la loro visualizzazione in pagine web. Introdotte dalla versione CSS2 con la dichiarazione <code>@font-face</code>, le Web font sono oggi pienamente compatibili con la maggioranza dei browser (IE4+, Firefox 3.5+, Safari 3.1+, Opera 10+, Chrome 4.0+) e costituiscono la soluzione più efficace per una coerente composizione tipografica. Google Fonts è una piattaforma di distribuzione gratuita di Web font.</p>
 <h3 id="titillium-web">Titillium Web</h3>
-<p>Il carattere tipografico istituzionale è la famiglia di font <a href="https://www.google.com/fonts/specimen/Titillium+Web">Titillium Web</a>, realizzato come progetto didattico all’interno all’Accademia di Belle Arti di Urbino e distribuito con licenza Open Font da Google Fonts. La famiglia di caratteri Titillium Web è composta da numerose font di diversi pesi tipografici (dall’Extra-Light all’Ultra-Bold) garantendo così un’estrema flessibilità di utilizzo nelle composizioni dei testi. </p>
+<p>Il carattere tipografico istituzionale è la famiglia di font <a href="https://www.google.com/fonts/specimen/Titillium+Web">Titillium Web</a>, realizzato come progetto didattico all’interno all’Accademia di Belle Arti di Urbino e distribuito con licenza Open Font da Google Fonts. La famiglia di caratteri Titillium Web è composta da numerose font di diversi pesi tipografici (dall’Extra-Light all’Ultra-Bold) garantendo così un’estrema flessibilità di utilizzo nelle composizioni dei testi.</p>
 <h4 id="specimen-della-famiglia-titillium-web">Specimen della famiglia Titillium Web</h4>
 <pre><code class="lang-markup">&lt;div class=&quot;lg-example-titillium&quot;&gt;
 &lt;p class=&quot;font-extra-light&quot;&gt;
@@ -206,7 +262,7 @@
 
 <h3 id="dimensioni-e-interlinea-del-testo">Dimensioni e interlinea del testo</h3>
 <div class="lg-callout lg-callout-must">
-<mark>SI DEVE</mark> Un paragrafo di testo non deve essere mai essere composto in una dimensione inferiore a 12 sp. La dimensione standard del paragrafo di testo è prevista in 18 sp, con interlinea 24 sp e una spaziatura di 5 em. Un paragrafo di testo deve essere composto sempre nel peso Regular, mai in Light o Bold. L’interlinea avrà generalmente una dimensione pari a circa il 150% della dimensione del corpo del carattere (per esempio un testo in corpo 18 sp avrà un’interlinea di 28 sp).
+<mark>SI DEVE</mark> Un paragrafo di testo non deve mai essere composto in una dimensione inferiore a 12px. La dimensione standard del paragrafo di testo è prevista in 18px. Un paragrafo di testo deve essere composto sempre nel peso Regular, mai in Light o Bold. L’interlinea avrà generalmente una dimensione pari a circa il 150% della dimensione del corpo del carattere (per esempio un testo in corpo 18px avrà un’interlinea di 27px).
 </div>
 
 <h3 id="allineamento">Allineamento</h3>
@@ -221,14 +277,14 @@
 
 <h3 id="markup-semantico">Markup semantico</h3>
 <div class="lg-callout lg-callout-should">
-<mark>SI DOVREBBE</mark> L’uso dei tag semantici consente di venire incontro ai requisiti di accessibilità, permettendo la corretta interpretazione del testo da parte dei device di ausilio alla lettura.
+<mark>SI DEVE</mark> L’uso dei tag semantici consente di venire incontro ai requisiti di accessibilità, permettendo la corretta interpretazione del testo da parte dei device di ausilio alla lettura.
 </div>
 
 <h3 id="composizione-tabelle">Composizione tabelle</h3>
-<p>In genere nelle tabelle un corretto allineamento del testo e una giusta spaziatura fra le colonne e le righe 
-sono già in grado di creare la percezione delle strutture verticali e orizzontali che sottostanno al contenuto, 
-rendendo superflua la presenza di molte delle linee divisorie o dei fondini di cella. </p>
-<p>Una tabella leggera (meno linee, meno colori) permette di concentrarsi meglio sul contenuto. </p>
+<p>In genere nelle tabelle un corretto allineamento del testo e una giusta spaziatura fra le colonne e le righe
+sono già in grado di creare la percezione delle strutture verticali e orizzontali che sottostanno al contenuto,
+rendendo superflua la presenza di molte delle linee divisorie o dei fondini di cella.</p>
+<p>Una tabella leggera (meno linee, meno colori) permette di concentrarsi meglio sul contenuto.</p>
 <h4 id="esempio-di-tabella-con-css-di-default">Esempio di tabella con CSS di default</h4>
 <pre><code class="lang-markup">&lt;div class=&quot;table-responsive&quot;&gt;
 &lt;table class=&quot;table-striped&quot;&gt;
@@ -278,38 +334,38 @@ rendendo superflua la presenza di molte delle linee divisorie o dei fondini di c
 <pre><code class="lang-markup">&lt;div class=&quot;lg-example-tipografia&quot;&gt;
 &lt;div&gt;
   &lt;h1&gt;H1 Titolo&lt;/h1&gt;
-  &lt;small&gt;&lt;strong&gt;Titolo pagina&lt;/strong&gt;: Titillium bold - corpo 72sp, interlinea 86sp&lt;/small&gt;
+  &lt;small&gt;&lt;strong&gt;Titolo pagina&lt;/strong&gt;: Titillium bold - corpo 54px, interlinea 1.2&lt;/small&gt;
 &lt;/div&gt;
 
 &lt;div&gt;
   &lt;h2&gt;H2 Titolo&lt;/h2&gt;
-  &lt;small&gt;&lt;strong&gt;Titolo sezione&lt;/strong&gt;: Titillium bold - corpo 60sp, interlinea 72sp&lt;/small&gt;
+  &lt;small&gt;&lt;strong&gt;Titolo sezione&lt;/strong&gt;: Titillium bold - corpo 40px, interlinea 1.2&lt;/small&gt;
 &lt;/div&gt;
 
 &lt;div&gt;
 &lt;h3&gt;H3 Titolo&lt;/h3&gt;
-  &lt;small&gt;&lt;strong&gt;Titolo articolo&lt;/strong&gt;: Titillium bold - corpo 36sp, interlinea 48sp&lt;/small&gt;
+  &lt;small&gt;&lt;strong&gt;Titolo articolo&lt;/strong&gt;: Titillium bold - corpo 32px, interlinea 1.2&lt;/small&gt;
 &lt;/div&gt;
 
 &lt;div&gt;
   &lt;h4&gt;H4 Titolo&lt;/h4&gt;
-  &lt;small&gt;&lt;strong&gt;Titolo paragrafo&lt;/strong&gt;: Titillium bold - corpo 24sp, interlinea 28sp&lt;/small&gt;
+  &lt;small&gt;&lt;strong&gt;Titolo paragrafo&lt;/strong&gt;: Titillium bold - corpo 23px, interlinea 1.2&lt;/small&gt;
 &lt;/div&gt;
 
 &lt;div&gt;
   &lt;h5&gt;H5 Titolo&lt;/h5&gt;
-  &lt;small&gt;&lt;strong&gt;Testo grande&lt;/strong&gt;: Titillium normal - corpo 21sp, interlinea 28sp&lt;/small&gt;
+  &lt;small&gt;&lt;strong&gt;Testo grande&lt;/strong&gt;: Titillium normal - corpo 21px, interlinea 1.2&lt;/small&gt;
 &lt;/div&gt;
 
 &lt;div&gt;
   &lt;h6&gt;H6 Titolo&lt;/h6&gt;
-  &lt;small&gt;&lt;strong&gt;Titoletto&lt;/strong&gt;: Titillium bold - corpo 18sp, interlinea 28sp&lt;/small&gt;
+  &lt;small&gt;&lt;strong&gt;Titoletto&lt;/strong&gt;: Titillium bold - corpo 18px, interlinea 1.55&lt;/small&gt;
 &lt;/div&gt;
 
 &lt;div&gt;
-  &lt;p&gt;Ecco un bianco scenario per tratteggiarvi l&#39;accompagnamento degli oggetti di sfondo che pur vivono. 
+  &lt;p&gt;Ecco un bianco scenario per tratteggiarvi l&#39;accompagnamento degli oggetti di sfondo che pur vivono.
   Non ne sarò l&#39;artefice impaziente&lt;/p&gt;
-  &lt;small&gt;&lt;strong&gt;Testo standard&lt;/strong&gt;: Titillium normal - corpo 18sp, interlinea 28sp&lt;/small&gt;
+  &lt;small&gt;&lt;strong&gt;Testo standard&lt;/strong&gt;: Titillium normal - corpo 18px, interlinea 1.55&lt;/small&gt;
 &lt;/div&gt;
 
 &lt;div&gt;
@@ -319,23 +375,23 @@ rendendo superflua la presenza di molte delle linee divisorie o dei fondini di c
       Non ne sarò l&#39;artefice impaziente
     &lt;/p&gt;
   &lt;/blockquote&gt;
-  &lt;small&gt;&lt;strong&gt;citazione&lt;/strong&gt;: Titillium normal - corpo 18sp, interlinea 28sp, rientro 30sp&lt;/small&gt;
+  &lt;small&gt;&lt;strong&gt;citazione&lt;/strong&gt;: Titillium normal - corpo 18px, interlinea 1.55&lt;/small&gt;
 &lt;/div&gt;
 
 &lt;div&gt;
-  &lt;p&gt;&lt;small&gt;Ecco un bianco scenario per tratteggiarvi l&#39;accompagnamento degli oggetti di sfondo che pur vivono. 
+  &lt;p&gt;&lt;small&gt;Ecco un bianco scenario per tratteggiarvi l&#39;accompagnamento degli oggetti di sfondo che pur vivono.
   Non ne sarò l&#39;artefice impaziente&lt;/small&gt;&lt;/p&gt;
-  &lt;small&gt;&lt;strong&gt;testo minimo&lt;/strong&gt;: Titillium normal - corpo 16sp, interlinea 22sp&lt;/small&gt;
+  &lt;small&gt;&lt;strong&gt;testo minimo&lt;/strong&gt;: Titillium normal - corpo 15px, interlinea 1.55&lt;/small&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 </code></pre>
 <!-- ![html](/images/stili-tipografici.png) -->
 <h3 id="colore-del-testo">Colore del testo</h3>
-<p>Generalmente il colore del testo deve essere nero (#1C2024) o grigio (#5A6772) su fondo bianco (#FFFFFF). 
-Viceversa per le composizioni in negativo. Dove necessario possono essere usati colori diversi dal nero 
-e dal grigio purché sia garantito un rapporto di contrasto minimo tra testo e sfondo di 4,5:1 (AA), 
-come stabilito dalle specifiche di accessibilità. La verifica del rapporto di contrasto può essere 
-facilmente effettuata attraverso molti tool online. </p>
+<p>Generalmente il colore del testo deve essere nero (#1C2024) o grigio (#5A6772) su fondo bianco (#FFFFFF).
+Viceversa per le composizioni in negativo. Dove necessario possono essere usati colori diversi dal nero
+e dal grigio purché sia garantito un rapporto di contrasto minimo tra testo e sfondo di 4,5:1 (AA),
+come stabilito dalle specifiche di accessibilità. La verifica del rapporto di contrasto può essere
+facilmente effettuata attraverso molti tool online.</p>
 <ul>
 <li><a href="http://snook.ca/technical/colour_contrast/colour.html">esempio di strumento online per la verifica del contrasto colori</a></li>
 </ul>
@@ -380,7 +436,7 @@ facilmente effettuata attraverso molti tool online. </p>
 </ul>
 
 <h4 id="legature-e-crenatura">Legature e crenatura</h4>
-<p>La leggibilità del testo, nelle versioni dei browser più recenti, può essere migliorata con l’utilizzo della dichiarazione 
+<p>La leggibilità del testo, nelle versioni dei browser più recenti, può essere migliorata con l’utilizzo della dichiarazione
 <code>text-rendering: optimizeLegibility</code> che attiva il controllo della crenatura del testo e la sostituzione automatica dei glifi delle legature. Attualmente la dichiarazione è riconosciuta in Safari 5 e Chrome. Firefox applica automaticamente la dichiarazione per i testi composti in corpo superiore a 20 px. Utilizzando una font OpenType possono esserne sfruttate le opzioni per le legature comuni e discrezionali con la dichiarazione
  <code>font-featuresettings: “liga” 1, “dlig” 1</code>.</p>
 <hr>
@@ -402,52 +458,58 @@ Ecco un bianco scenario<br>per tratteggiarvi l’accompagnamento<br>degli oggett
 
   </article>
 
-</main>
+</div>
 
+
+  <a href="#page_top" title="torna all'inizio del contenuto" class="sr-only">torna all'inizio del contenuto</a>
 
 </div><!-- container -->
 
-<div class="lg-partecipa clearfix hidden-print">
-  <p>
+<aside class="lg-partecipa clearfix hidden-print">
+  <h3>
     <i class="glyphicon glyphicon-edit"> </i>
     Vuoi contribuire ? Partecipa creando una issue
     sul <a href="https://github.com/italia-it/designer.italia.it">repository GitHub</a><br>
-  </p>
-</div>
-<footer id="footer" class="hidden-print">
+  </h3>
+</aside>
+
+<footer id="footer" class="hidden-print" tabindex="0">
   <div class="container">
     <div class="row">
       <div class="col-xs-2 col-sm-2 col-md-1">
         <img class="footer__logo" src="images/loghi/logo-it.svg"
-             alt="Logo italia.it">
-      </div>        
-      <div class="col-xs-10 col-sm-10 col-md-5">        
+             alt="">
+      </div>
+      <div class="col-xs-10 col-sm-10 col-md-5">
         <p class="footer__title h3">Linee guida di design per i siti web della PA
           <small>Versione alfa</small></p>
       </div>
       <div class="col-md-6 col-sm-12">
         <a href="http://www.agid.gov.it" target="_blank">
           <img class="footer__logo--agid" src="images/loghi/agid.svg"
-               alt="Logo Agenzia per l'Italia digitale">
+               alt="Agenzia per l'Italia digitale">
         </a>
       </div>
     </div>
     <div class="row">
       <ul class="col-xs-12 footer__links clearfix">
-        <li><a href="/designer.italia.it/linee-guida/privacy-policy/" title="privacy policy">Privacy</a></li>
-        <li><a href="/designer.italia.it/linee-guida/note-legali/" title="note legali">Note legali</a></li>
+        <li><a href="/linee-guida/privacy-policy/" title="privacy policy">Privacy</a></li>
+        <li><a href="/linee-guida/note-legali/" title="note legali">Note legali</a></li>
+        <li><a href="/linee-guida/credits/" title="credits">Credits</a></li>
+        <li><a href="/linee-guida/showcase/" title="credits">Showcase</a></li>
+        <li><a href="/linee-guida/contatti/" title="credits">Contatti</a></li>
       </ul>
     </div>
   </div>
 </footer>
 
-<a href="#page_top" title="torna all'inizio del contenuto" class="scrollto_top sr-only"><span></span></a>
+<a href="#page_top" title="torna all'inizio del contenuto" class="scrollto_top"><span><span class="sr-only">torna all'inizio del contenuto</span></span></a>
 
 <p class="cookie-message sr-only" role="alert">
   Questo sito utilizza cookie tecnici, analytics e di terze parti. Proseguendo nella navigazione accetti l’utilizzo dei cookie.
 </p>
 
-<script src="/designer.italia.it/scripts/combined-331374d3bf.js"></script>
+<script src="/scripts/combined-7c8e5787d0.js"></script>
 
 <script>
 (function (b, o, i, l, e, r) {
